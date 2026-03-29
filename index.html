@@ -1081,16 +1081,7 @@ footer {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Glitch effect */
-.glitch {
-  position: relative;
-  animation: glitchMain 8s infinite;
-}
-@keyframes glitchMain {
-  0%, 97%, 100% { transform: none; }
-  98% { transform: skewX(-2deg); clip-path: polygon(0 30%, 100% 30%, 100% 50%, 0 50%); }
-  99% { transform: skewX(2deg); clip-path: polygon(0 60%, 100% 60%, 100% 80%, 0 80%); }
-}
+
 
 /* WhatsApp Float */
 .whatsapp-float {
@@ -1223,7 +1214,7 @@ footer {
         <span class="badge-dot"></span>
         Delhi's Premium Rental Fleet
       </div>
-      <h1 class="hero-title glitch">
+      <h1 class="hero-title">
         <span class="line">DRIVE</span>
         <span class="line orange">ELITE.</span>
         <span class="line stroke">FEEL THE</span>
@@ -1321,56 +1312,71 @@ footer {
     </div>
     <div class="fleet-scroll">
       <div class="fleet-card">
-        <div class="fleet-card-img">🏎️<div class="fleet-overlay"></div></div>
+        <div class="fleet-card-img">
+          <span style="font-size:5rem;">🚗</span>
+          <div class="fleet-overlay"></div>
+        </div>
         <div class="fleet-card-body">
-          <div class="fleet-card-type">Sports Car</div>
-          <div class="fleet-card-name">MUSTANG GT</div>
+          <div class="fleet-card-type">Premium SUV · Diesel</div>
+          <div class="fleet-card-name">HYUNDAI ALCAZAR</div>
           <div class="fleet-card-meta">
-            <div class="fleet-price">₹8,000 <span>/ day</span></div>
+            <div class="fleet-price">₹4,500 <span>/ day <s>₹5,200</s></span></div>
             <button class="book-btn" onclick="showPage('fleet')">View →</button>
           </div>
         </div>
       </div>
       <div class="fleet-card">
-        <div class="fleet-card-img">🏍️<div class="fleet-overlay"></div></div>
+        <div class="fleet-card-img">
+          <span style="font-size:5rem;">🏍️</span>
+          <div class="fleet-overlay"></div>
+        </div>
         <div class="fleet-card-body">
-          <div class="fleet-card-type">Sport Bike</div>
-          <div class="fleet-card-name">DUKE 390</div>
+          <div class="fleet-card-type">Superbike · 2024</div>
+          <div class="fleet-card-name">KAWASAKI NINJA 300</div>
           <div class="fleet-card-meta">
-            <div class="fleet-price">₹2,500 <span>/ day</span></div>
+            <div class="fleet-price">₹1,500 <span>/ day <s>₹2,000</s></span></div>
             <button class="book-btn" onclick="showPage('fleet')">View →</button>
           </div>
         </div>
       </div>
       <div class="fleet-card">
-        <div class="fleet-card-img">🚗<div class="fleet-overlay"></div></div>
+        <div class="fleet-card-img">
+          <span style="font-size:5rem;">🚙</span>
+          <div class="fleet-overlay"></div>
+        </div>
         <div class="fleet-card-body">
-          <div class="fleet-card-type">Luxury SUV</div>
-          <div class="fleet-card-name">BMW X5</div>
+          <div class="fleet-card-type">Premium SUV · AX7</div>
+          <div class="fleet-card-name">MAHINDRA XUV700</div>
           <div class="fleet-card-meta">
-            <div class="fleet-price">₹12,000 <span>/ day</span></div>
+            <div class="fleet-price">₹6,000 <span>/ day <s>₹7,500</s></span></div>
             <button class="book-btn" onclick="showPage('fleet')">View →</button>
           </div>
         </div>
       </div>
       <div class="fleet-card">
-        <div class="fleet-card-img">🏍️<div class="fleet-overlay"></div></div>
+        <div class="fleet-card-img">
+          <span style="font-size:5rem;">🏍️</span>
+          <div class="fleet-overlay"></div>
+        </div>
         <div class="fleet-card-body">
-          <div class="fleet-card-type">Superbike</div>
-          <div class="fleet-card-name">R15 V4</div>
+          <div class="fleet-card-type">Cruiser · Stealth Black</div>
+          <div class="fleet-card-name">RE HUNTER 350</div>
           <div class="fleet-card-meta">
-            <div class="fleet-price">₹1,800 <span>/ day</span></div>
+            <div class="fleet-price">₹1,200 <span>/ day <s>₹1,500</s></span></div>
             <button class="book-btn" onclick="showPage('fleet')">View →</button>
           </div>
         </div>
       </div>
       <div class="fleet-card">
-        <div class="fleet-card-img">🚘<div class="fleet-overlay"></div></div>
+        <div class="fleet-card-img">
+          <span style="font-size:5rem;">🚗</span>
+          <div class="fleet-overlay"></div>
+        </div>
         <div class="fleet-card-body">
-          <div class="fleet-card-type">Sedan</div>
-          <div class="fleet-card-name">HONDA CITY</div>
+          <div class="fleet-card-type">Compact SUV · 2023</div>
+          <div class="fleet-card-name">TATA NEXON</div>
           <div class="fleet-card-meta">
-            <div class="fleet-price">₹3,500 <span>/ day</span></div>
+            <div class="fleet-price">₹2,500 <span>/ day <s>₹3,500</s></span></div>
             <button class="book-btn" onclick="showPage('fleet')">View →</button>
           </div>
         </div>
@@ -1498,164 +1504,156 @@ footer {
 
   <div class="vehicle-grid" id="vehicleGrid">
 
+    <!-- CARD 1: Hyundai Alcazar -->
     <div class="vehicle-card" data-type="car luxury">
-      <div class="vehicle-img">🏎️
-        <div class="vehicle-tag">Popular</div>
+      <div class="vehicle-img">
+        <span style="font-size:5rem;">🚗</span>
+        <span style="font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:rgba(245,245,245,0.2);margin-top:8px;display:block;">Add Photo Here</span>
+        <div class="vehicle-tag">Luxury Line</div>
       </div>
       <div class="vehicle-body">
-        <div class="vehicle-category">Sports Car</div>
-        <div class="vehicle-name">FORD MUSTANG GT</div>
+        <div class="vehicle-category">Premium SUV · Diesel Manual</div>
+        <div class="vehicle-name">HYUNDAI ALCAZAR</div>
+        <div style="font-size:0.8rem;color:rgba(245,245,245,0.45);line-height:1.6;margin-bottom:16px;">Spacious &amp; comfortable 6/7 seater with luxury interiors and smooth performance. Clean &amp; well-maintained · Perfect for city &amp; highway trips.</div>
         <div class="vehicle-specs">
-          <div class="spec"><span class="spec-label">Engine</span><span class="spec-val">5.0L V8</span></div>
-          <div class="spec"><span class="spec-label">Power</span><span class="spec-val">450 HP</span></div>
-          <div class="spec"><span class="spec-label">Drive</span><span class="spec-val">Self / Chauffeur</span></div>
+          <div class="spec"><span class="spec-label">Seats</span><span class="spec-val">6 / 7</span></div>
+          <div class="spec"><span class="spec-label">Fuel</span><span class="spec-val">Diesel</span></div>
+          <div class="spec"><span class="spec-label">Drive</span><span class="spec-val">Self Drive</span></div>
+          <div class="spec"><span class="spec-label">Year</span><span class="spec-val">2024</span></div>
         </div>
         <div class="vehicle-price-row">
           <div class="vehicle-price">
-            <div class="price-amount">₹8,000</div>
-            <span class="price-period">per day</span>
+            <div class="price-amount">₹4,500</div>
+            <span class="price-period"><s style="color:rgba(245,245,245,0.3);font-size:0.8rem;">₹5,200</s> / day</span>
           </div>
           <button class="book-btn" onclick="showPage('contact')">Book Now</button>
         </div>
       </div>
     </div>
 
-    <div class="vehicle-card" data-type="car luxury">
-      <div class="vehicle-img">🚗</div>
-      <div class="vehicle-body">
-        <div class="vehicle-category">Luxury SUV</div>
-        <div class="vehicle-name">BMW X5</div>
-        <div class="vehicle-specs">
-          <div class="spec"><span class="spec-label">Engine</span><span class="spec-val">3.0L Twin-T</span></div>
-          <div class="spec"><span class="spec-label">Power</span><span class="spec-val">335 HP</span></div>
-          <div class="spec"><span class="spec-label">Drive</span><span class="spec-val">Both Options</span></div>
-        </div>
-        <div class="vehicle-price-row">
-          <div class="vehicle-price">
-            <div class="price-amount">₹12,000</div>
-            <span class="price-period">per day</span>
-          </div>
-          <button class="book-btn" onclick="showPage('contact')">Book Now</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="vehicle-card" data-type="car luxury">
-      <div class="vehicle-img">🚘</div>
-      <div class="vehicle-body">
-        <div class="vehicle-category">Luxury Sedan</div>
-        <div class="vehicle-name">MERCEDES C-CLASS</div>
-        <div class="vehicle-specs">
-          <div class="spec"><span class="spec-label">Engine</span><span class="spec-val">2.0L Turbo</span></div>
-          <div class="spec"><span class="spec-label">Power</span><span class="spec-val">255 HP</span></div>
-          <div class="spec"><span class="spec-label">Drive</span><span class="spec-val">Chauffeur</span></div>
-        </div>
-        <div class="vehicle-price-row">
-          <div class="vehicle-price">
-            <div class="price-amount">₹10,000</div>
-            <span class="price-period">per day</span>
-          </div>
-          <button class="book-btn" onclick="showPage('contact')">Book Now</button>
-        </div>
-      </div>
-    </div>
-
+    <!-- CARD 2: Hyundai Creta -->
     <div class="vehicle-card" data-type="car budget">
-      <div class="vehicle-img">🚙</div>
+      <div class="vehicle-img">
+        <span style="font-size:5rem;">🚗</span>
+        <span style="font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:rgba(245,245,245,0.2);margin-top:8px;display:block;">Add Photo Here</span>
+        <div class="vehicle-tag">Best Value</div>
+      </div>
       <div class="vehicle-body">
-        <div class="vehicle-category">Hatchback</div>
-        <div class="vehicle-name">HONDA CITY</div>
+        <div class="vehicle-category">Compact SUV · Petrol Manual</div>
+        <div class="vehicle-name">HYUNDAI CRETA</div>
+        <div style="font-size:0.8rem;color:rgba(245,245,245,0.45);line-height:1.6;margin-bottom:16px;">Smooth drive, powerful petrol engine &amp; premium comfort. Perfect for city rides &amp; long trips. Spacious, stylish &amp; fully loaded.</div>
         <div class="vehicle-specs">
-          <div class="spec"><span class="spec-label">Engine</span><span class="spec-val">1.5L VTEC</span></div>
-          <div class="spec"><span class="spec-label">Power</span><span class="spec-val">119 HP</span></div>
+          <div class="spec"><span class="spec-label">Fuel</span><span class="spec-val">Petrol</span></div>
+          <div class="spec"><span class="spec-label">Trans</span><span class="spec-val">Manual</span></div>
           <div class="spec"><span class="spec-label">Drive</span><span class="spec-val">Self Drive</span></div>
         </div>
         <div class="vehicle-price-row">
           <div class="vehicle-price">
-            <div class="price-amount">₹3,500</div>
-            <span class="price-period">per day</span>
+            <div class="price-amount">₹3,000</div>
+            <span class="price-period"><s style="color:rgba(245,245,245,0.3);font-size:0.8rem;">₹3,500</s> / day</span>
           </div>
           <button class="book-btn" onclick="showPage('contact')">Book Now</button>
         </div>
       </div>
     </div>
 
-    <div class="vehicle-card" data-type="bike luxury">
-      <div class="vehicle-img">🏍️
-        <div class="vehicle-tag">🔥 Hot</div>
+    <!-- CARD 3: Mahindra XUV700 -->
+    <div class="vehicle-card" data-type="car luxury">
+      <div class="vehicle-img">
+        <span style="font-size:5rem;">🚙</span>
+        <span style="font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:rgba(245,245,245,0.2);margin-top:8px;display:block;">Add Photo Here</span>
+        <div class="vehicle-tag">🔥 Premium</div>
       </div>
       <div class="vehicle-body">
-        <div class="vehicle-category">Superbike</div>
-        <div class="vehicle-name">KTM DUKE 390</div>
+        <div class="vehicle-category">Premium SUV · AX7 Luxury Line</div>
+        <div class="vehicle-name">MAHINDRA XUV700</div>
+        <div style="font-size:0.8rem;color:rgba(245,245,245,0.45);line-height:1.6;margin-bottom:16px;">Spacious &amp; powerful SUV with advanced safety and comfort. Smooth drive, strong performance. Ideal for city &amp; highway trips.</div>
         <div class="vehicle-specs">
-          <div class="spec"><span class="spec-label">Engine</span><span class="spec-val">373cc Single</span></div>
-          <div class="spec"><span class="spec-label">Power</span><span class="spec-val">44 HP</span></div>
-          <div class="spec"><span class="spec-label">Drive</span><span class="spec-val">Self Ride</span></div>
+          <div class="spec"><span class="spec-label">Variant</span><span class="spec-val">AX7 Lux</span></div>
+          <div class="spec"><span class="spec-label">Year</span><span class="spec-val">2024</span></div>
+          <div class="spec"><span class="spec-label">Drive</span><span class="spec-val">Self Drive</span></div>
+        </div>
+        <div class="vehicle-price-row">
+          <div class="vehicle-price">
+            <div class="price-amount">₹6,000</div>
+            <span class="price-period"><s style="color:rgba(245,245,245,0.3);font-size:0.8rem;">₹7,500</s> / day</span>
+          </div>
+          <button class="book-btn" onclick="showPage('contact')">Book Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 4: Tata Nexon -->
+    <div class="vehicle-card" data-type="car budget">
+      <div class="vehicle-img">
+        <span style="font-size:5rem;">🚗</span>
+        <span style="font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:rgba(245,245,245,0.2);margin-top:8px;display:block;">Add Photo Here</span>
+      </div>
+      <div class="vehicle-body">
+        <div class="vehicle-category">Compact SUV · XE Variant</div>
+        <div class="vehicle-name">TATA NEXON</div>
+        <div style="font-size:0.8rem;color:rgba(245,245,245,0.45);line-height:1.6;margin-bottom:16px;">Safe &amp; Stylish compact SUV with excellent comfort and top-class safety. Clean &amp; well-maintained, smooth ride with great mileage.</div>
+        <div class="vehicle-specs">
+          <div class="spec"><span class="spec-label">Variant</span><span class="spec-val">XE</span></div>
+          <div class="spec"><span class="spec-label">Year</span><span class="spec-val">2023</span></div>
+          <div class="spec"><span class="spec-label">Drive</span><span class="spec-val">Self Drive</span></div>
         </div>
         <div class="vehicle-price-row">
           <div class="vehicle-price">
             <div class="price-amount">₹2,500</div>
-            <span class="price-period">per day</span>
+            <span class="price-period"><s style="color:rgba(245,245,245,0.3);font-size:0.8rem;">₹3,500</s> / day</span>
           </div>
           <button class="book-btn" onclick="showPage('contact')">Book Now</button>
         </div>
       </div>
     </div>
 
-    <div class="vehicle-card" data-type="bike budget">
-      <div class="vehicle-img">🏍️</div>
+    <!-- CARD 5: Kawasaki Ninja 300 -->
+    <div class="vehicle-card" data-type="bike luxury">
+      <div class="vehicle-img">
+        <span style="font-size:5rem;">🏍️</span>
+        <span style="font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:rgba(245,245,245,0.2);margin-top:8px;display:block;">Add Photo Here</span>
+        <div class="vehicle-tag">🔥 Sporty</div>
+      </div>
       <div class="vehicle-body">
-        <div class="vehicle-category">Sport Bike</div>
-        <div class="vehicle-name">YAMAHA R15 V4</div>
+        <div class="vehicle-category">Superbike · 2024</div>
+        <div class="vehicle-name">KAWASAKI NINJA 300</div>
+        <div style="font-size:0.8rem;color:rgba(245,245,245,0.45);line-height:1.6;margin-bottom:16px;">Sporty. Powerful. Iconic. Sharp looks, strong performance, smooth ride. Perfect for highway runs and weekend fun.</div>
         <div class="vehicle-specs">
-          <div class="spec"><span class="spec-label">Engine</span><span class="spec-val">155cc</span></div>
-          <div class="spec"><span class="spec-label">Power</span><span class="spec-val">18.4 HP</span></div>
+          <div class="spec"><span class="spec-label">Engine</span><span class="spec-val">300cc Twin</span></div>
+          <div class="spec"><span class="spec-label">Year</span><span class="spec-val">2024</span></div>
           <div class="spec"><span class="spec-label">Drive</span><span class="spec-val">Self Ride</span></div>
         </div>
         <div class="vehicle-price-row">
           <div class="vehicle-price">
-            <div class="price-amount">₹1,800</div>
-            <span class="price-period">per day</span>
+            <div class="price-amount">₹1,500</div>
+            <span class="price-period"><s style="color:rgba(245,245,245,0.3);font-size:0.8rem;">₹2,000</s> / day</span>
           </div>
           <button class="book-btn" onclick="showPage('contact')">Book Now</button>
         </div>
       </div>
     </div>
 
+    <!-- CARD 6: Royal Enfield Hunter 350 -->
     <div class="vehicle-card" data-type="bike budget">
-      <div class="vehicle-img">🛵</div>
+      <div class="vehicle-img">
+        <span style="font-size:5rem;">🏍️</span>
+        <span style="font-size:0.6rem;letter-spacing:2px;text-transform:uppercase;color:rgba(245,245,245,0.2);margin-top:8px;display:block;">Add Photo Here</span>
+        <div class="vehicle-tag">Stealth Black</div>
+      </div>
       <div class="vehicle-body">
-        <div class="vehicle-category">Cruiser Bike</div>
-        <div class="vehicle-name">ROYAL ENFIELD CLASSIC</div>
+        <div class="vehicle-category">Cruiser Bike · 2024</div>
+        <div class="vehicle-name">RE HUNTER 350</div>
+        <div style="font-size:0.8rem;color:rgba(245,245,245,0.45);line-height:1.6;margin-bottom:16px;">Urban. Stylish. Smooth. Lightweight, powerful &amp; super comfortable. Perfect for daily rides or weekend plans.</div>
         <div class="vehicle-specs">
           <div class="spec"><span class="spec-label">Engine</span><span class="spec-val">350cc</span></div>
-          <div class="spec"><span class="spec-label">Power</span><span class="spec-val">20.2 HP</span></div>
+          <div class="spec"><span class="spec-label">Year</span><span class="spec-val">2024</span></div>
           <div class="spec"><span class="spec-label">Drive</span><span class="spec-val">Self Ride</span></div>
         </div>
         <div class="vehicle-price-row">
           <div class="vehicle-price">
-            <div class="price-amount">₹2,000</div>
-            <span class="price-period">per day</span>
-          </div>
-          <button class="book-btn" onclick="showPage('contact')">Book Now</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="vehicle-card" data-type="car luxury">
-      <div class="vehicle-img">🏎️</div>
-      <div class="vehicle-body">
-        <div class="vehicle-category">Luxury SUV</div>
-        <div class="vehicle-name">AUDI Q7</div>
-        <div class="vehicle-specs">
-          <div class="spec"><span class="spec-label">Engine</span><span class="spec-val">3.0L TFSI</span></div>
-          <div class="spec"><span class="spec-label">Power</span><span class="spec-val">335 HP</span></div>
-          <div class="spec"><span class="spec-label">Drive</span><span class="spec-val">Chauffeur</span></div>
-        </div>
-        <div class="vehicle-price-row">
-          <div class="vehicle-price">
-            <div class="price-amount">₹15,000</div>
-            <span class="price-period">per day</span>
+            <div class="price-amount">₹1,200</div>
+            <span class="price-period"><s style="color:rgba(245,245,245,0.3);font-size:0.8rem;">₹1,500</s> / day</span>
           </div>
           <button class="book-btn" onclick="showPage('contact')">Book Now</button>
         </div>
@@ -2021,110 +2019,98 @@ footer {
 </div>
 
 <script>
-// Loader
-window.addEventListener('load', () => {
+// ===== LOADER FIX =====
+window.addEventListener("load", function () {
+  const loader = document.getElementById("loader");
   setTimeout(() => {
-    document.getElementById('loader').classList.add('hidden');
-    initReveal();
-  }, 2000);
+    loader.classList.add("hidden");
+  }, 1500);
 });
 
-// Custom Cursor
-const cursor = document.getElementById('cursor');
-const ring = document.getElementById('cursor-ring');
+
+// ===== PAGE SWITCHING SYSTEM =====
+function showPage(pageId) {
+  // Hide all pages
+  document.querySelectorAll(".page").forEach(page => {
+    page.classList.remove("active");
+  });
+
+  // Show selected page
+  const target = document.getElementById(pageId);
+  if (target) {
+    target.classList.add("active");
+  }
+
+  // Scroll to top
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  // Re-trigger reveals on new page
+  setTimeout(() => {
+    document.querySelectorAll(".reveal:not(.visible)").forEach(el => observer.observe(el));
+  }, 100);
+}
+
+
+// ===== FILTER SYSTEM (Fleet page) =====
+function filterVehicles(type, btn) {
+  const cards = document.querySelectorAll(".vehicle-card");
+
+  cards.forEach(card => {
+    const types = card.getAttribute("data-type");
+
+    if (type === "all" || types.includes(type)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+
+  // Active button highlight
+  document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+}
+
+
+// ===== SCROLL REVEAL =====
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll(".reveal").forEach(el => {
+  observer.observe(el);
+});
+
+
+// ===== CUSTOM CURSOR (SAFE VERSION) =====
+const cursor = document.getElementById("cursor");
+const ring = document.getElementById("cursor-ring");
+
 let mx = 0, my = 0, rx = 0, ry = 0;
-
-document.addEventListener('mousemove', e => {
+document.addEventListener("mousemove", e => {
   mx = e.clientX; my = e.clientY;
-  cursor.style.left = mx - 6 + 'px';
-  cursor.style.top = my - 6 + 'px';
+  if(cursor){ cursor.style.left = (mx-6)+"px"; cursor.style.top = (my-6)+"px"; }
 });
-
-function animRing() {
-  rx += (mx - rx) * 0.12;
-  ry += (my - ry) * 0.12;
-  ring.style.left = rx - 18 + 'px';
-  ring.style.top = ry - 18 + 'px';
+function animRing(){
+  rx += (mx-rx)*0.12; ry += (my-ry)*0.12;
+  if(ring){ ring.style.left = (rx-18)+"px"; ring.style.top = (ry-18)+"px"; }
   requestAnimationFrame(animRing);
 }
 animRing();
-
-document.querySelectorAll('a, button, .fleet-card, .vehicle-card, .feature-card').forEach(el => {
-  el.addEventListener('mouseenter', () => {
-    cursor.style.transform = 'scale(2)';
-    ring.style.transform = 'scale(1.5)';
-    ring.style.borderColor = 'var(--gold)';
-  });
-  el.addEventListener('mouseleave', () => {
-    cursor.style.transform = 'scale(1)';
-    ring.style.transform = 'scale(1)';
-    ring.style.borderColor = 'var(--orange)';
-  });
+document.querySelectorAll("a,button,.fleet-card,.vehicle-card,.feature-card").forEach(el=>{
+  el.addEventListener("mouseenter",()=>{ if(cursor){cursor.style.transform="scale(2)";} if(ring){ring.style.borderColor="var(--gold)";} });
+  el.addEventListener("mouseleave",()=>{ if(cursor){cursor.style.transform="scale(1)";} if(ring){ring.style.borderColor="var(--orange)";} });
 });
 
-// Page Navigation
-function showPage(id) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-  setTimeout(initReveal, 100);
-}
 
-// Scroll Reveal
-function initReveal() {
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((e, i) => {
-      if (e.isIntersecting) {
-        setTimeout(() => e.target.classList.add('visible'), i * 80);
-      }
-    });
-  }, { threshold: 0.1 });
-  reveals.forEach(el => observer.observe(el));
-}
+// ===== FAILSAFE (if anything breaks, show page anyway) =====
+setTimeout(() => {
+  const loader = document.getElementById("loader");
+  if (loader && !loader.classList.contains("hidden")) {
+    loader.classList.add("hidden");
+  }
+}, 4000);
 
-// Fleet Filter
-function filterVehicles(type, btn) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  
-  document.querySelectorAll('.vehicle-card').forEach(card => {
-    const types = card.dataset.type || '';
-    if (type === 'all' || types.includes(type)) {
-      card.style.display = 'block';
-      card.style.animation = 'fadeSlideUp 0.4s ease both';
-    } else {
-      card.style.display = 'none';
-    }
-  });
-}
-
-// Booking Form
-function submitBooking() {
-  const btn = event.target;
-  btn.textContent = '✓ Request Sent! We\'ll contact you shortly.';
-  btn.style.background = '#25D366';
-  btn.disabled = true;
-}
-
-// Counter animation
-function animateCounters() {
-  document.querySelectorAll('.stat-num').forEach(el => {
-    const target = el.textContent;
-    if (!isNaN(parseInt(target))) {
-      const end = parseInt(target);
-      let count = 0;
-      const step = end / 40;
-      const timer = setInterval(() => {
-        count += step;
-        if (count >= end) { el.textContent = target; clearInterval(timer); }
-        else el.textContent = Math.floor(count) + (target.includes('+') ? '+' : '');
-      }, 30);
-    }
-  });
-}
-
-setTimeout(animateCounters, 2200);
 </script>
-</body>
-</html>
